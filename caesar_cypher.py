@@ -18,6 +18,14 @@ def count_down(count):
         count = count - 1
     return sum
     
+
+def decrypt_message():
+    plaintext = ""
+    for letter in message:
+        plaintext = plaintext + decrypt_letter
+
+
+
 def decrypt_letter(letter,shift):
     #create a sinilar function to encrypt except ascii values are subtracted 
     if (is_alphabetic(letter)):
@@ -32,9 +40,10 @@ def is_alphabetic(letter):
     return letter >= "A" and letter <= "Z"
 
 if __name__ == "__main__":
-    print(encrypt_letter("A", 3))
-    print(decrypt_letter("D", 3))
-    print(count_down(10))
+    # print(encrypt_letter("A", 3))
+    # print(decrypt_letter("D", 3))
+    # print(count_down(10))
+    input("enter a sentence (with spaces): ")
 
 
 # print(encrypt_letter("A", 3))
