@@ -18,6 +18,13 @@ def count_down(count):
         count = count - 1
     return sum
     
+def encrypt_letter(letter, shift):
+    #create a letter encrypter by converting letters to ASCII and differentiating the valies by [shift] amount
+    letter = ord(letter)
+    letter = int(letter) + shift
+    letter = chr(int(letter))
+    return letter 
+
 
 def decrypt_message():
     plaintext = ""
@@ -43,7 +50,8 @@ if __name__ == "__main__":
     # print(encrypt_letter("A", 3))
     # print(decrypt_letter("D", 3))
     # print(count_down(10))
-    input("enter a sentence (with spaces): ")
+    #input("enter a sentence (with spaces): ")
+    print(encrypt_letter("A", 3))
 
 
 # print(encrypt_letter("A", 3))
